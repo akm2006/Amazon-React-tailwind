@@ -1,9 +1,10 @@
 @import "tailwindcss";
+
 :root {
   font-family: "Noto Sans", "Lato", "Roboto", Arial, sans-serif;
   line-height: 1.5;
   font-weight: 500;
-
+  
   color-scheme: light;
   color: #0f1111;
   background-color: #ffffff;
@@ -14,6 +15,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+i{
+ @apply text-2xl m-1.5 mb-0;
+}
 .nav-ops {
   @apply flex items-center justify-center border-1 border-transparent hover:border-white h-[100%] p-2 cursor-pointer;
 }
