@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 
-const Sidepanel = () => {
+const Sidepanel = ({isOpen,toggleSidebar}) => {
+
   return (
-    <div id="sideBarScreen" className="bg-black/60 fixed hidden inset-0 z-10">
-      <div id="sideBar" className="w-95">
-        <div className="w-full h-14 bg-[#232f3e] text-white text-xl font-bold flex items-center pl-5">
+    <>
+    <div id="sideBarScreen" className={`bg-black/60 ${isOpen ? 'hidden' : 'flex'} fixed inset-0 z-10`}>
+      <div id="sideBar" className='w-95'>
+        <div className="w-full h-14 bg-[#232f3e] text-white text-xl font-bold flex items-center pl-5 ">
           <i className="bi bi-person-circle"></i>
           <p className="ml-2">Hello, sign in</p>
         </div>
@@ -59,10 +61,10 @@ const Sidepanel = () => {
             <ul className="space-y-4 cursor-pointer">
               <li>Your Account</li>
               <li>
-                <i class="bi bi-globe"></i>English
+                <i className="bi bi-globe"></i>English
               </li>
               <li>
-                <i class="bi bi-flag-fill"></i>United States
+                <i className="bi bi-flag-fill"></i>United States
               </li>
               <li>Customer Service</li>
               <li>Sign in</li>
@@ -70,10 +72,10 @@ const Sidepanel = () => {
           </div>
         </div>
       </div>
-      <div id="closeSideBar" className="cursor-pointer">
-        <i class="bi bi-x-lg text-white"></i>
+      <div id="closeSideBar" className="cursor-pointer" onClick={toggleSidebar}>
+        <i className="bi bi-x-lg text-white"></i>
       </div>
-    </div>
+    </div></>
   );
 };
 

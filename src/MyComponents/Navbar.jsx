@@ -1,6 +1,6 @@
 import React from "react";
 
-const Navbar = () => {
+const Navbar = ({toggleSidebar}) => {
   return (
     <> 
    
@@ -10,7 +10,7 @@ const Navbar = () => {
         
         <div id="nav-address box" className="flex gap-1 nav-ops w-25">
         <div className="flex">
-        <i class="bi bi-geo-alt mt-3"></i>
+        <i className="bi bi-geo-alt mt-3"></i>
           </div>
           <p className="">Deliver to<br/><span className="font-extrabold text-base" >India</span></p>
           
@@ -23,12 +23,12 @@ const Navbar = () => {
           </select>
           <input className="bg-[#e6e6e6] w-full p-2 focus:outline-none focus:ring-0" placeholder="Search on Amazon" />
           <button id="search-icon" className="bg-[#f3a847] w-15 rounded-r-[0.5rem] items-center justify-center text-xl flex text-gray-700 glow">
-          <i class="bi bi-search"></i>
+          <i className="bi bi-search"></i>
           </button>
         </div>
 
         <div id="language box" className="nav-ops font-bold text-base">
-        <i class="bi bi-flag-fill"></i>
+        <i className="bi bi-flag-fill"></i>
           <select id="language" className="text-gray-400">
             <option>EN</option>
             <option>EN</option>
@@ -48,13 +48,13 @@ const Navbar = () => {
          
         </div>
         <div id="nav-cart box" className="text-base nav-ops w-20">
-        <i class="bi bi-cart-fill"></i>Cart
+        <i className="bi bi-cart-fill"></i>Cart
         </div>
       </div>
 
       <div className="flex h-10 bg-[#232f3e] text-white text- items-center px-2" id="panel">
-        <div className="nav-ops">
-        <i class="bi bi-list"></i>All
+        <div className="nav-ops" id="sideBarButton" onClick={toggleSidebar}>
+        <i className="bi bi-list"></i>All
         </div>
         <div className="flex items-center gap-3">
           <p className="nav-ops">Today's Deal</p>
