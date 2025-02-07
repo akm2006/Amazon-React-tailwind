@@ -25,3 +25,9 @@ i{
 {
   @apply border-4 border-transparent focus-within:border-orange-400 cursor-pointer ;
 }
+
+#heroImg
+{
+  -webkit-mask-image:linear-gradient(180deg, black,rgba(0, 0, 0, 0.696),rgba(0, 0, 0, 0));
+  mask-image: linear-gradient(180deg, black,rgba(0, 0, 0, 0.696),rgba(0, 0, 0, 0));
+}
