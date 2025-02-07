@@ -17,7 +17,6 @@ const App = () => {
       <Sidepanel isOpen={isOpen} toggleSidebar={toggleSidebar} />
       
       <Navbar toggleSidebar={toggleSidebar} />
-      
       <Hero />
       <Foot />
     </div>
