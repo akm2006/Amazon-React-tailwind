@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 
 const Slider = () => {
   const slides = [
@@ -10,38 +10,52 @@ const Slider = () => {
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [currentIndex]);
+
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
+    setCurrentIndex((currentIndex) =>
+      currentIndex === slides.length - 1 ? 0 : currentIndex + 1
+    );
   };
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? slides.length - 1 : prevIndex - 1
+    setCurrentIndex((currentIndex) =>
+      currentIndex === 0 ? slides.length - 1 : currentIndex - 1
     );
   };
   return (
-    <div id="slider" className="">
-      <div className="w-full h-[100vh] flex relative">
-        <img
-          id="sliderImg"
-          className="w-full h-[80%]"
-          src={slides[currentIndex]}
-          alt=""
-        />
-        <button
-          id="prev"
-          className="absolute left-0 top-0 py-[15vh] cursor-pointer"
-          onClick={nextSlide}
-        >
-          <i className="bi bi-chevron-left !text-5xl "></i>
-        </button>
-        <button
-          id="next"
-          className=" absolute right-0 top-0 py-[15vh] cursor-pointer"
-          onClick={prevSlide}
-        >
-          <i className="bi bi-chevron-right !text-5xl"></i>
-        </button>
+    <div id="slider" className="w-full relative overflow-hidden ">
+      <div
+        className="w-full flex transition-transform ease-in-out duration-300 "
+        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+      >
+        {slides.map((img, index) => (
+          <img
+            key={index}
+            src={img}
+            alt={`Slide ${index + 1}`}
+            id="sliderImg"
+          />
+        ))}
       </div>
+      <button
+        id="prev"
+        className="absolute left-0 top-0 cursor-pointer h-[50%]"
+        onClick={prevSlide}
+      >
+        <i className="bi bi-chevron-left !text-5xl "></i>
+      </button>
+      <button
+        id="next"
+        className=" absolute right-0 top-0 h-[50%] cursor-pointer"
+        onClick={nextSlide}
+      >
+        <i className="bi bi-chevron-right !text-5xl"></i>
+      </button>
     </div>
   );
 };
