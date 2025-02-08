@@ -12,7 +12,7 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className="">
    
       <Sidepanel isOpen={isOpen} toggleSidebar={toggleSidebar} />
       
