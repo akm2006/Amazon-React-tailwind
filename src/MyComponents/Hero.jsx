@@ -2,13 +2,10 @@ import React, { useState,useEffect } from "react";
 import Herocontent from "./Herocontent";
 
 const Hero = () => {
-  const slides = [
-    "/Amazon-React-tailwind/images/hero/hero1.jpg",
-    "/Amazon-React-tailwind/images/hero/hero2.jpg",
-    "/Amazon-React-tailwind/images/hero/hero3.jpg",
-    "/Amazon-React-tailwind/images/hero/hero4.jpg",
-    "/Amazon-React-tailwind/images/hero/hero5.jpg",
-  ];
+  const slides = Object.values(
+    import.meta.glob("/src/assets/images/hero/*.jpg", { eager: true })
+  ).map((img) => img.default || img);
+  
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -16,7 +13,7 @@ const Hero = () => {
       nextSlide();
     }, 3000);
     return () => clearInterval(interval);
-  }, [currentIndex]);
+  }, [slides.length]);
 
   const nextSlide = () => {
     setCurrentIndex((currentIndex) =>
