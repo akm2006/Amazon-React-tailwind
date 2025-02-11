@@ -5,6 +5,10 @@
   background-color: #d6dada;
 }
 
+* {
+  @apply transition-all ease-in-out duration-300
+}
+
 i {
   @apply text-xl m-1.5 mb-0;
 }
@@ -51,18 +55,18 @@ a {
   @apply h-[100%] m-0
 }
 
-.info
-{
+.info {
   @apply flex flex-col gap-4
 }
 
 .info li {
   @apply py-1 text-[#cbccce] text-sm
-
-}
-.region div { @apply border rounded-sm border-[#707882] py-1 px-2 text-sm font-extralight text-[#cbccce]
 }
 
-.terms a{
+.region div {
+  @apply border rounded-sm border-[#707882] py-1 px-2 text-sm font-extralight text-[#cbccce]
+}
+
+.terms a {
   @apply text-white
 }

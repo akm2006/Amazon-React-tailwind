@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Herocontent from "./Herocontent";
-import Foot from "./foot";
 
 const Hero = () => {
   const slides = Object.values(
