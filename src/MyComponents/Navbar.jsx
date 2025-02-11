@@ -15,7 +15,7 @@ const Navbar = ({toggleSidebar}) => {
           <p className="">Deliver to<br/><span className="font-extrabold text-base" >India</span></p>
           
         </div>
-        <div id="nav-search" className="flex w-[60%] text-gray-500 glow rounded-[0.4rem] h-12">
+        <div id="nav-search" className="flex w-[60%] text-gray-500 glow rounded-[1rem] h-12">
           <select className="w-15 bg-gray-300 rounded-l-[0.5rem]  text-center glow">
             <option>All</option>
             <option>Fashion</option>

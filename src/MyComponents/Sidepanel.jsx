@@ -4,8 +4,8 @@ const Sidepanel = ({isOpen,toggleSidebar}) => {
 
   return (
     <>
-    <div id="sideBarScreen" className={`bg-black/60 ${isOpen ? 'flex' : 'hidden'} fixed inset-0 z-10`}>
-      <div id="sideBar" className='w-95'>
+    <div id="sideBarScreen" className={`bg-black/60 ${isOpen ? 'flex' : 'hidden'} fixed inset-0 z-10`} onClick={toggleSidebar}>
+      <div id="sideBar" className='w-95'  onClick={(e) => e.stopPropagation()}>
         <div className="w-full h-14 bg-[#232f3e] text-white text-xl font-bold flex items-center pl-5 ">
           <i className="bi bi-person-circle"></i>
           <p className="ml-2">Hello, sign in</p>
@@ -72,7 +72,7 @@ const Sidepanel = ({isOpen,toggleSidebar}) => {
           </div>
         </div>
       </div>
-      <div id="closeSideBar" className="cursor-pointer" onClick={toggleSidebar}>
+      <div id="closeSideBar" className="cursor-pointer h-10 " onClick={toggleSidebar}>
         <i className="bi bi-x-lg text-white"></i>
       </div>
     </div></>
