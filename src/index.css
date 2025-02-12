@@ -28,7 +28,7 @@ i {
 }
 
 .productBox {
-  @apply w-85 h-105 bg-white p-4 flex-row;
+  @apply w-85 h-105 bg-white p-4 flex-row max-sm:w-[90vw];
 }
 
 .productBox img {

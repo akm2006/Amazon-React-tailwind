@@ -30,7 +30,7 @@ const Hero = () => {
       <div>
         <div id="slider" className="w-full relative overflow-hidden  ">
           <div
-            className="w-full flex transition-transform ease-in-out duration-300 h-[90vh] "
+            className="w-full flex transition-transform ease-in-out duration-300 h-[90vh] max-sm:h-[40vh] "
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
           >
             {slides.map((img, index) => (

@@ -24,7 +24,7 @@ const Sidepanel = ({ isOpen, toggleSidebar }) => {
 
       <div
         id="sideBar"
-        className={`fixed w-95 h-full bg-white shadow-lg z-20 transition-transform duration-300 ${
+        className={`fixed w-95 max-sm:w-[95vw] h-full bg-white shadow-lg z-20 transition-transform duration-300 ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
         onClick={(e) => e.stopPropagation()}
@@ -100,7 +100,7 @@ const Sidepanel = ({ isOpen, toggleSidebar }) => {
       {isOpen && (
         <div
           id="closeSideBar"
-          className="fixed top-4 left-95 z-30 cursor-pointer"
+          className="fixed top-4 left-95 max-sm:left-[80vw] z-30 cursor-pointer"
           onClick={toggleSidebar}
         >
           <i className="bi bi-x-lg  text-white text-2xl p-2 "></i>

@@ -5,7 +5,10 @@ import Foot from "./foot";
 
 const Herocontent = () => {
   return (
-    <div id="heroContent" className=" left-0 px-10 absolute top-[50%] w-screen">
+    <div
+      id="heroContent"
+      className=" left-0 px-10 max-sm:px-0 absolute top-[50%] max-sm:top-[40%] w-screen"
+    >
       <div
         id="message"
         className="bg-white w-full flex justify-center items-center p-2.5"
@@ -18,7 +21,7 @@ const Herocontent = () => {
       </div>
       <Deals />
       <Carousel />
-      <Foot/>
+      <Foot />
     </div>
   );
 };

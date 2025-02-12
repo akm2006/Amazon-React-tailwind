@@ -1,19 +1,18 @@
 import React from "react";
-import logo from "/src/assets/images/logo.png";
+import logo from "/src/assets/images/foot.png";
 
 const Foot = () => {
   return (
     <div className=" absolute text-white left-0 ">
       <footer>
         <div
-          className="w-screen h-12 flex items-center justify-center bg-[#37475a] cursor-pointer hover:bg-[#41546b]"
-          onClick={() => (window.location.hash = "#")} role="button"
+          className="w-screen h-12 flex items-center justify-center bg-[#37475a] cursor-pointer hover:bg-[#41546b] "
+          onClick={() => (window.location.hash = "#")}
+          role="button"
         >
-          <a className=" !text-white">
-            Back to top
-          </a>
+          <a className=" !text-white">Back to top</a>
         </div>
-        <div className="bg-[#232f3e] flex justify-center border-b-[1px] border-gray-600 py-10 gap-30">
+        <div className="bg-[#232f3e] flex justify-center border-b-[1px] border-gray-600 py-10 gap-30 max-sm:hidden">
           <div className="info ">
             <h3>Get to Know Us</h3>
             <ul>
@@ -79,7 +78,7 @@ const Foot = () => {
           </div>
         </div>
         <div className="bg-[#232f3e] flex justify-center items-center p-10 gap-20">
-          <img src={logo} className="h-8 w-24" alt="logo" />
+          <img src={logo} className="h-8 w-24 max-sm:hidden" alt="logo" />
           <div className="region flex gap-2">
             <div>
               <i className="bi bi-globe"></i> English
