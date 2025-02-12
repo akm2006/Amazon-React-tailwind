@@ -81,8 +81,8 @@ const Sidepanel = ({ isOpen, toggleSidebar }) => {
           </div>
 
           <div className="px-6 py-6">
-            <h2 className="text-xl font-bold mb-6">Help & Settings</h2>
-            <ul className="space-y-4 cursor-pointer">
+            <h2 className="text-xl font-bold mb-5">Help & Settings</h2>
+            <ul className="space-y-4 cursor-pointer mb-20">
               <li>Your Account</li>
               <li>
                 <i className="bi bi-globe"></i> English
